@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickTune</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <p id="status">Status: Not recording</p>
+
+    <div id="note-display">-</div>
+    <p id="frequency-display">- Hz</p>
+
+    <div id="tuner-bar-container">
+        <div class="labels">
+            <span>-50¢</span>
+            <span>0¢</span>
+            <span>+50¢</span>
+        </div>
+        <div id="bar-track">
+            <div id="bar-marker"></div>
+        </div>
+        <div id="cents-display">- ¢</div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
