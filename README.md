@@ -2,7 +2,7 @@
 
 A lightweight chromatic tuner that runs entirely in the browser.
 
-![QuickTune screenshot](screenshot.png)
+![QuickTune screenshot](img/image.png)
 
 ## How it works
 
