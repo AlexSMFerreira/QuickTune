@@ -1,0 +1,18 @@
+{
+  "name": "quick-tune",
+  "version": "1.0.0",
+  "description": "A web-based guitar tuner application",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for vanilla JS project'",
+    "lint": "echo 'No linter configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  },
+  "devDependencies": {},
+  "keywords": ["tuner", "guitar", "audio"],
+  "author": "",
+  "license": "ISC"
+}
