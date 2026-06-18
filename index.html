@@ -8,8 +8,34 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-    <p id="status">Status: Not recording</p>
 
+    <!-- Hamburger button -->
+    <button id="menu-btn" aria-label="Open presets menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+
+    <!-- Active preset tag (top-left when preset is selected) -->
+    <div id="active-preset-tag" class="hidden"></div>
+
+    <!-- Overlay behind drawer -->
+    <div id="drawer-overlay"></div>
+
+    <!-- Preset drawer -->
+    <aside id="preset-drawer" aria-label="Presets">
+        <div class="drawer-header">
+            <span class="drawer-title">Presets</span>
+        </div>
+        <div class="drawer-content" id="preset-list"></div>
+        <div class="drawer-footer">
+            <button id="btn-new-preset" class="btn-new-preset">+ New Preset</button>
+        </div>
+    </aside>
+
+    <!-- Main tuner -->
+    <p id="status">Not recording</p>
+    <p id="string-indicator" class="hidden">String <span id="active-string-label">—</span></p>
     <div id="note-display">-</div>
     <p id="frequency-display">- Hz</p>
 
@@ -23,6 +49,35 @@
             <div id="bar-marker"></div>
         </div>
         <div id="cents-display">- ¢</div>
+    </div>
+
+    <div id="strings-grid" class="hidden"></div>
+
+    <!-- Preset create/edit modal -->
+    <div id="preset-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-box">
+            <h3 id="modal-title">New Preset</h3>
+            <div class="modal-field">
+                <label for="modal-name">Name</label>
+                <input id="modal-name" type="text" placeholder="My Preset" maxlength="40" />
+            </div>
+            <div class="modal-field">
+                <label for="modal-copy-from">Copy strings from</label>
+                <select id="modal-copy-from">
+                    <option value="">— None —</option>
+                </select>
+            </div>
+            <div class="modal-strings-section">
+                <p class="modal-section-label">Strings</p>
+                <div id="modal-strings-list"></div>
+                <button id="modal-add-string" class="btn-sm">+ Add String</button>
+            </div>
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn-sm">Cancel</button>
+                <button id="modal-save" class="btn-primary">Save</button>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="src/main.js"></script>
